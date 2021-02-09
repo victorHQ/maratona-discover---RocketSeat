@@ -1,0 +1,365 @@
+/* GLOBAL ======================== */
+
+// Variáveis ========================
+$black-background: rgb(31, 34, 35);
+$dark-background: rgb(19, 21, 22);
+$cool-blue: rgb(165, 183, 204);
+$green: #49aa26;
+$light-green: #3dd705;
+$red: #e92929;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 93.75%; /* 15px */
+}
+
+body{
+    background: $black-background;
+    font-family: 'Poppins', sans-serif;
+
+    input, textarea, select{
+        background-color: #181a1b;
+        color: #e8e6e3;
+    }
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.container{
+    width: m#{i}n(90vw, 800px);
+    margin: auto;
+}
+
+/* TITLES ========================*/
+h2{
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: $cool-blue;
+
+    font-weight: normal;
+}
+
+/* LINKS & BUTTONS ========================*/
+
+a{
+    color: $green;
+    text-decoration: none;
+
+    &:hover{
+        color: $light-green;
+    }
+}
+
+button{
+    width: 100%;
+    height: 50px;
+
+    border: none;
+
+    color: #fff;
+    background: $green;
+
+    padding: 0;
+
+    border-radius: 0.25rem;
+
+    cursor: pointer;
+
+    &:hover{
+        background: $light-green;
+    }
+}
+
+.button{
+    
+    &.new{
+        display: inline-block;
+        margin-bottom: 0.8rem;
+    }
+
+    &.cancel{
+        color: $red;
+        border: 2px $red solid;
+        border-radius: 0.25rem;
+
+        height: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        opacity: 0.6;
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+/* HEADER ======================== */
+header{
+    background: #2d4a22;
+    padding: 2rem 0 14rem;
+    text-align: center;
+}
+
+/* BALANCE ======================== */
+#balance{
+    margin-top: -8rem;
+    margin-bottom: 3rem;
+
+    h2{
+        color: #fff;
+        margin-top: 0;
+    }
+}
+
+/* CARDS ======================== */
+.card{
+    background: rgb(24, 26, 27);
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+
+    margin-bottom: 2rem;
+
+    color: $cool-blue;
+
+    -webkit-animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+    h3{
+        font-weight: normal;
+        font-size: 1rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    p{
+        font-size: 2rem;
+        line-height: 3rem;
+
+        margin-top: 1rem;
+    }
+
+    &.total{
+        background: $green;
+        color: #fff;
+    }
+}
+
+/* TABLE ======================== */
+#transaction{
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+
+    -webkit-animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+#data-table{
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    color: rgb(175, 168, 157);
+}
+
+table{
+
+    width: 100%;
+    border-spacing: 0.0.5rem;
+
+    thead tr th:first-child,
+    tbody tr td:first-child{
+        border-radius: 0.25rem 0 0 0.25rem;
+    }
+
+    thead tr th:last-child,
+    tbody tr td:last-child{
+        border-radius:  0 0.25rem 0.25rem 0 ;
+    }
+
+    thead{
+
+        th{
+            background: $dark-background;
+    
+            font-weight: normal;
+            padding: 1rem 2rem;
+    
+            text-align: left;
+        }
+    }
+
+    tbody{
+
+        tr{
+            opacity: 0.7;
+    
+            &:hover{
+                opacity: 1;
+            }
+        }
+
+        td{
+            background: rgb(15, 16, 17);
+    
+            padding: 1rem 2rem;
+
+            .imgTransaction{
+                cursor: pointer;
+            }
+
+            &.description{
+                color: $cool-blue;
+            }
+
+            &.income{
+                color: rgb(94, 237, 159);;
+            }
+
+            &.expense{
+                color: $red;
+            }
+        }
+    }
+}
+
+/* MODAL ======================== */
+.modal-overlay{
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 999;
+
+    &.active{
+        opacity: 1;
+        visibility: visible;
+
+        -webkit-animation: fade-in 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: fade-in 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+}
+
+.modal{
+    background: $dark-background;
+    padding: 2.4rem;
+            
+    border-radius: 0.25rem;
+
+    position: relative;
+    z-index: 1;
+    
+}
+
+/* FORM ======================== */
+#form{
+    max-width: 500px;
+
+    h2{
+        margin-top:0 ;
+    }
+
+    form{
+
+        input{
+            border: none;
+            border-radius: 0.2rem;
+    
+            padding: 0.8rem;
+
+            width: 100%;
+        }
+
+        .input-group{
+            margin-top: 0.8rem;
+
+            .help{
+                opacity: 0.4;
+                color: #e8e6e3;
+            }
+
+            &.actions{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .button, button{
+                    width: 48%;
+                }
+            }
+        }
+    }
+}
+
+/* FOOTER ======================== */
+footer{
+    text-align: center;
+    padding: 4rem 0 2rem;
+    color: $cool-blue;
+
+    opacity: 0.6;
+}
+
+/* RESPONSIVE ======================== */
+@media (min-width: 800px){
+    html{
+        font-size: 87.5%;
+    }
+
+    #balance{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+/**
+ * ----------------------------------------
+ * animation fade-in para o MODAL
+ * ----------------------------------------
+ */
+ @-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
