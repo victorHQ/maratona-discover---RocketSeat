@@ -5,9 +5,9 @@
 
 <p align="center">
  <a href="#tecnologias">Tecnologias</a> • 
- <a href="#license">Licença</a> • 
  <a href="#project">Projeto</a> • 
- <a href="#install">Instalação</a>
+ <a href="#install">Instalação</a> • 
+ <a href="#license">Licença</a>
 </p>
 
 <br>
