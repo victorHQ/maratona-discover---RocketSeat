@@ -28,14 +28,6 @@
   <img src="https://img.shields.io/static/v1?label=&message=JavaScript&color=0d0c0c&style=for-the-badge&logo=JavaScript"/>
 </p>
 
-<h2 id="license" align="center">
-  Licença 📝
-</h2>
-<p align="center">
-  Esse projeto está sob a licença MIT. Veja o arquivo <a href="LICENSE"> LICENSE </a> para mais detalhes.<br><br>
-  <img src="https://img.shields.io/static/v1?label=license&message=mit&color=green&style=for-the-badge&logo="/>   
-</p>
-
 <h2 id="project" align="center">
   Projeto :technologist:
 </h2>
@@ -49,4 +41,12 @@
 </h2>
 <p align="center">
   Baixe os arquivos, extraia em algum diretório de sua preferência e execute o arquivo "index.html" ou acesse o link: <a href="https://devfinances.000webhostapp.com/"> $Dev.Finances </a>.
+</p>
+
+<h2 id="license" align="center">
+  Licença 📝
+</h2>
+<p align="center">
+  Esse projeto está sob a licença MIT. Veja o arquivo <a href="LICENSE"> LICENSE </a> para mais detalhes.<br><br>
+  <img src="https://img.shields.io/static/v1?label=license&message=mit&color=green&style=for-the-badge&logo="/>   
 </p>
