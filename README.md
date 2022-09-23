@@ -40,7 +40,7 @@
   Instalação :rocket:
 </h2>
 <p align="center">
-  Baixe os arquivos, extraia em algum diretório de sua preferência e execute o arquivo "index.html" ou acesse o link: <a href="https://devfinances.000webhostapp.com/"> $Dev.Finances </a>.
+  Baixe os arquivos, extraia em algum diretório de sua preferência e execute o arquivo "index.html" ou acesse o link: <a href="https://victorhq.github.io/maratona-discover---RocketSeat/"> $Dev.Finances </a>.
 </p>
 
 <h2 id="license" align="center">
