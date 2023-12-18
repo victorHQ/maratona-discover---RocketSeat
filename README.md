@@ -26,6 +26,7 @@
   <img src="https://img.shields.io/static/v1?label=&message=SASS&color=f0a5ca&style=for-the-badge&logo=sass"/>
   <img src="https://img.shields.io/static/v1?label=&message=HTML5&color=ed7c5c&style=for-the-badge&logo=html5"/>
   <img src="https://img.shields.io/static/v1?label=&message=JavaScript&color=0d0c0c&style=for-the-badge&logo=JavaScript"/>
+  <img src="https://img.shields.io/static/v1?label=&message=Cypress&color=69D3A7&style=for-the-badge&logo=Cypress"/>
 </p>
 
 <h2 id="project" align="center">
